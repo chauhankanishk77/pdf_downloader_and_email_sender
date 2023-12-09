@@ -7,6 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.message import EmailMessage
 import os
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -187,4 +188,4 @@ def process_pdf():
         return render_template('result.html')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    serve(app, host='0.0.0.0', port=9000)
