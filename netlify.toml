@@ -1,6 +1,9 @@
 [build]
-  command = "pip install --upgrade pip && pip install -r requirements.txt && gunicorn -b 0.0.0.0:$PORT routes:app"
-  publish = "app"
+  command = "pip install --upgrade pip && pip install -r requirements.txt && python routes.py"
+  publish = "app"  # Adjust based on your project structure
 
 [context.production.environment]
-  PYTHON_VERSION = "3.8"
+  PYTHON_VERSION = "3.8"  # Specify the Python version you are using
+
+[context.split1]
+  command = "echo This is a different build context"
