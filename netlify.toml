@@ -1,6 +1,6 @@
 [build]
   command = "pip install -r requirements.txt"
-  publish = "app"  # Adjust based on your project structure
+  publish = "/"  # Adjust based on your project structure
 
 [context.production.environment]
   PYTHON_VERSION = "3.8"  # Specify the Python version you are using
