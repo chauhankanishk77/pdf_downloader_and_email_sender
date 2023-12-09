@@ -1,0 +1,9 @@
+[build]
+  command = "pip install -r requirements.txt"
+  publish = "app"  # Adjust based on your project structure
+
+[context.production.environment]
+  PYTHON_VERSION = "3.9"  # Specify the Python version you are using
+
+[context.split1]
+  command = "echo This is a different build context"
