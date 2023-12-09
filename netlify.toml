@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt"
+  command = "pip install --upgrade pip && pip install -r requirements.txt && python app/routes.py"
   publish = "app"  # Adjust based on your project structure
 
 [context.production.environment]
